@@ -9,3 +9,8 @@ TEMPORAL_CLIENT_SECRET=XXXXXXXXXXXXXX
 TEMPORAL_ENVIRONMENT=cdt
 TEMPORAL_NAMESPACE=telikos-temporal-cdt
 ~~~
+
+### Temporal UI
+~~~
+https://cdt-westeurope-01-primary-web.maersk-digital.net/namespaces/telikos-temporal-cdt/workflows/
+~~~
