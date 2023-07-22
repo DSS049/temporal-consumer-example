@@ -34,7 +34,7 @@ public class TemporalWorkerConsumerConfiguration implements ApplicationRunner {
         client = temporalClientProvider.getTemporalClientInstance();
         WorkerFactoryOptions workerFactoryOptions = temporalClientProvider.getWorkerFactoryOptions();
         WorkerFactory factory = WorkerFactory.newInstance(client, workerFactoryOptions);
-        io.temporal.worker.Worker worker = factory.newWorker(feedbackTaskQueueName);
+        io.temporal.worker.Worker worker = factory.newWorker("FeedbackActivityTaskQueue");
         //worker.registerWorkflowImplementationTypes(ActivityPlanWorkflowImpl.class);
         worker.registerActivitiesImplementations(bookingFeedbackActivity);
         factory.start();
